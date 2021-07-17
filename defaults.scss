@@ -1,0 +1,103 @@
+@import './mixins.scss','./colors.scss';
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+
+
+html,body {
+  width: 100%;
+  height: 100%;
+}
+a {
+  color: #2688a9;
+  text-decoration: none;
+}
+
+.btn {
+  display: inline;
+  font-size: 1rem;
+  padding: .75rem 1rem;
+  border:none;
+  border-radius: 0.25rem;
+  outline: none;
+  cursor:pointer;
+  max-width: max-content;
+}
+
+.btn > a {
+  width: 100%;
+  height: 100%;
+  color: rgb(255, 255, 255);
+}
+.btn:hover {
+  opacity: 0.8;
+}
+
+.btn:active {
+  outline: none;
+}
+
+@each $color, $value in $colors {
+  .btn-#{$color} {
+    background-color: $value;
+  }
+  .bg-#{$color} {
+    background-color: $value;
+  }
+  .border-#{$color} {
+    border-color: $value;
+  }
+  .text-#{$color} {
+    color: $value;
+  }
+}
+
+@for $i from 1 through 8 {
+  .p-#{$i}{
+    padding: .5rem * $i;
+  }
+  .px-#{$i}{
+    padding-left: .5rem * $i;
+    padding-right: .5rem * $i;
+  }
+  .py-#{$i}{
+    padding-top: .5rem * $i;
+    padding-bottom: .5rem * $i;
+  }
+  .m-#{$i}{
+    margin: .5rem * $i;
+  }
+  .mx-#{$i}{
+    margin-left: .5rem * $i;
+    margin-right: .5rem * $i;
+  }
+  .my-#{$i}{
+    margin-top: .5rem * $i;
+    margin-bottom: .5rem * $i;
+  }
+
+  .gap-#{$i}{
+    gap: .5rem * $i;
+  }
+}
+
+.mx-auto{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.circle {
+  @include circle-mix(120px);
+  &-md {
+    @include circle-mix(180px);
+  }
+  &-lg {
+    @include circle-mix(240px);
+  }
+  &-xl {
+    @include circle-mix(300px);
+  }
+}
