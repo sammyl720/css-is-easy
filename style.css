@@ -3,14 +3,14 @@
   0% {
     transform: scale(1);
   }
-  20% {
-    transform: scale(1.4);
+  40% {
+    transform: scale(1.3);
   }
   50% {
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
-  90% {
-    transform: scale(0.8);
+  75% {
+    transform: scale(0.9);
   }
   100% {
     transform: scale(1);
@@ -436,8 +436,9 @@ a {
   justify-content: center;
   box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.1);
 }
-.circle > img:hover, .circle > img:active {
-  animation: bounce 3s alternate ease-in;
+.circle > img:hover, .circle > img:active, .circle > img:focus {
+  animation: bounce 2s alternate ease-in;
+  overflow: hidden;
 }
 .circle-md {
   overflow: hidden;
@@ -450,8 +451,9 @@ a {
   justify-content: center;
   box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.1);
 }
-.circle-md > img:hover, .circle-md > img:active {
-  animation: bounce 3s alternate ease-in;
+.circle-md > img:hover, .circle-md > img:active, .circle-md > img:focus {
+  animation: bounce 2s alternate ease-in;
+  overflow: hidden;
 }
 .circle-lg {
   overflow: hidden;
@@ -464,8 +466,9 @@ a {
   justify-content: center;
   box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.1);
 }
-.circle-lg > img:hover, .circle-lg > img:active {
-  animation: bounce 3s alternate ease-in;
+.circle-lg > img:hover, .circle-lg > img:active, .circle-lg > img:focus {
+  animation: bounce 2s alternate ease-in;
+  overflow: hidden;
 }
 .circle-xl {
   overflow: hidden;
@@ -478,8 +481,9 @@ a {
   justify-content: center;
   box-shadow: inset 1px 1px 10px rgba(0, 0, 0, 0.1);
 }
-.circle-xl > img:hover, .circle-xl > img:active {
-  animation: bounce 3s alternate ease-in;
+.circle-xl > img:hover, .circle-xl > img:active, .circle-xl > img:focus {
+  animation: bounce 2s alternate ease-in;
+  overflow: hidden;
 }
 
 .card {
@@ -496,14 +500,14 @@ a {
   0% {
     transform: scale(1);
   }
-  20% {
-    transform: scale(1.4);
+  40% {
+    transform: scale(1.3);
   }
   50% {
-    transform: scale(1.2);
+    transform: scale(1.3);
   }
-  90% {
-    transform: scale(0.8);
+  75% {
+    transform: scale(0.9);
   }
   100% {
     transform: scale(1);
@@ -540,12 +544,16 @@ body {
   text-transform: uppercase;
   letter-spacing: -1px;
   background-color: #4158D0;
-  -webkit-background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #da3939 100%);
-  -ms-background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #da3939 100%);
-  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #da3939 100%);
+  -webkit-background-image: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  -ms-background-image: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  -moz-background-image: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  -o-background-image: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
+  background-image: linear-gradient(90deg, #4b6cb7 0%, #182848 100%);
   color: transparent;
   -webkit-background-clip: text;
   -ms-background-clip: text;
+  -moz-background-clip: text;
+  -o-background-clip: text;
   background-clip: text;
   background-size: 100% 100%;
   animation: expandBg 3s ease-in-out infinite;
@@ -607,6 +615,13 @@ figcaption {
 footer {
   width: 100%;
   max-width: 1000px;
+}
+
+@media screen and (min-width: 1000px) {
+  .container > .cell.card {
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
